@@ -44,16 +44,19 @@
 \section{Algorithms and equations} 
 
 \subsection{Problem 1:}
-To solve problem 1 all you need to do is plot the lines of the human and raptor. You take the speeds of each entity and multiply it by the integers from zero to ten, this is time. The human will have a 30 meter head start, so I just added 30 to the formula.
-	$$ RaptorPosition = RaptorSpeed * time $$
-	$$ HumanPosition = HumanSpeed * time +30$$
+To solve problem 1 all you need to do is plot the lines of the human and raptor. You take the speeds of each entity and multiply it by the integers from zero to ten, this is time. The human will have a 30 meter head start, so I just added 30 to the formula. Final distance is equal to initial distance plus velocity times time.
+	$${x_f} = {x_i} + v*t$$
+	
+	
 	
 \subsection{Problem 2:} I defined a function that found when and where the raptor catches the human. Using a for loop all times were looped through the equations for human and raptor positions. If the raptor position equals the human position return the time and location at that instant. This time and location is then printed to the screen.
 
-\subsection{Problem 3:} The time and positon that the raptor can bite you is found by subtracting the raptor position from the human position. This function If that value is less than or equal to 1 then it is close enough to attack you.
-$$ HumanPosition - RaptorPosition <= 1$$
+\subsection{Problem 3:} The time and positon that the raptor can bite you is found by subtracting the raptor position from the human position inside of a function. If that value is less than or equal to 1 then it is close enough to attack you. In the function a for loop is used for the range of functions, then inside the for loop is a if statement that uses the following formula.
+$$ pos_h - pos_r <= 1$$
+The time a distance is then printed to the screen. Also the graph from question one will have to be used again and an arrow added to the intersection point.
 
-\subsection{Problem 4:} Generate 3 different random integers between 0 and 100. Since the first chance that it bites you is 20, if the first number is less than 20 then it will bite you. The raptor has two more chances except they are 15 and 7 percent chances, respectively. If it is not successful after the third time then you get away. The probability of this is calculated by dividing the number of successful escapes in a range by 1000 and then multiplying by 100.
+\subsection{Problem 4:} Generate 3 different random integers between 0 and 100 using random.randint(100) three times and setting that equal to variables. Since the first chance that it bites you is 20, if the first number is less than 20 then it will bite you. Use an if statement for this. The raptor has two more chances except they are 15 and 7 percent chances, respectively. If it is not successful after the third time then you get away. This is done by using and if statement and then two elif statements, followed by an else. The probability of this is calculated by dividing the number of successful escapes in a range by 1000 and then multiplying by 100.
+
 $$Probability = (success/1000) * 100$$
 
 \section{Plots}
